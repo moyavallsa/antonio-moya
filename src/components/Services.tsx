@@ -23,7 +23,7 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={service.title}
-              className="bg-secondary border-none hover:bg-secondary/80 transition-all duration-300"
+              className="bg-secondary border-none hover:bg-secondary/80 transition-all duration-300 hover:scale-105"
               style={{ animationDelay: `${index * 200}ms` }}
             >
               <CardHeader className="text-center">
