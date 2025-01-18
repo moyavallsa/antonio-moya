@@ -7,13 +7,13 @@ const Portfolio = () => {
       title: "Unimodul.es",
       url: "https://unimodul.es",
       description: "Website development and management for Unimodul.es platform.",
-      image: "/lovable-uploads/c34e7296-6554-42b6-a49c-35d16e08d083.png"
+      image: "/lovable-uploads/c94560f6-92e6-4742-a6ab-ee8281ca6da7.png"
     },
     {
       title: "Luc-ia.fun",
       url: "https://luc-ia.fun",
       description: "Website development and management for Luc-ia.fun platform.",
-      image: "/lovable-uploads/c34e7296-6554-42b6-a49c-35d16e08d083.png"
+      image: "/lovable-uploads/c94560f6-92e6-4742-a6ab-ee8281ca6da7.png"
     }
   ];
 
