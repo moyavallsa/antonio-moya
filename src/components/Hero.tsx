@@ -6,7 +6,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-display mb-4">
             Antonio<br />Moya.
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground tracking-wide uppercase">
+          <p className="text-xl md:text-2xl tracking-wide uppercase relative bg-gradient-to-r from-white via-gray-300 to-white bg-[length:200%_100%] animate-gradient bg-clip-text text-transparent">
             Web Designer • Developer<br />
             Social Media Manager
           </p>
@@ -15,7 +15,6 @@ const Hero = () => {
         <div className="flex-1 mt-12 lg:mt-0 animate-fadeIn" style={{ animationDelay: "200ms" }}>
           <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto">
             <div className="absolute inset-0 rounded-full bg-secondary"></div>
-            {/* Replace with your headshot image */}
             <img
               src="/placeholder.svg"
               alt="Antonio Moya"
