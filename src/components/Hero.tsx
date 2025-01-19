@@ -1,6 +1,17 @@
+import { WavyBackground } from "./ui/wavy-background";
+
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center relative overflow-hidden">
+    <WavyBackground
+      className="min-h-screen"
+      containerClassName="min-h-screen"
+      colors={["#1a1a1a", "#222222", "#2a2a2a", "#333333"]}
+      waveWidth={100}
+      backgroundFill="hsl(var(--background))"
+      blur={2}
+      waveOpacity={0.3}
+      speed="slow"
+    >
       <div className="container mx-auto px-6 py-12 flex flex-col lg:flex-row items-center justify-between">
         <div className="flex-1 animate-fadeIn">
           <h1 className="text-5xl md:text-7xl font-display mb-4">
@@ -23,7 +34,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </WavyBackground>
   );
 };
 
