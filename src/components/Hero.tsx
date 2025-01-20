@@ -12,8 +12,8 @@ const Hero = () => {
       waveOpacity={0.3}
       speed="slow"
     >
-      <div className="container mx-auto px-6 py-12">
-        <div className="animate-fadeIn max-w-2xl">
+      <div className="container mx-auto px-6 py-12 flex flex-col lg:flex-row items-center justify-between">
+        <div className="flex-1 animate-fadeIn">
           <h1 className="text-5xl md:text-7xl font-display mb-4">
             Antonio<br />Moya.
           </h1>
@@ -23,12 +23,12 @@ const Hero = () => {
           </p>
         </div>
         
-        <div className="animate-fadeIn translate-x-32 translate-y-24 flex justify-end" style={{ animationDelay: "200ms" }}>
-          <div className="relative w-72 h-72 md:w-96 md:h-96">
+        <div className="flex-1 mt-12 lg:mt-0 animate-fadeIn" style={{ animationDelay: "200ms" }}>
+          <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto">
             <div className="absolute inset-0 rounded-full bg-secondary"></div>
             <img
-              src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmZiNjBiNzEtZjZiZi00ZmM0LWI3ZDAtZjI5ZTgxNjQ0ZWM4ZiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/xT9IgzoKnwFNmISR8I/giphy.gif"
-              alt="Terminal showing services"
+              src="/placeholder.svg"
+              alt="Antonio Moya"
               className="absolute inset-0 w-full h-full object-cover rounded-full"
             />
           </div>
