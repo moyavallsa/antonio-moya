@@ -23,7 +23,7 @@ const Hero = () => {
           </p>
         </div>
         
-        <div className="flex-1 mt-12 lg:mt-0 animate-fadeIn translate-x-4 translate-y-8" style={{ animationDelay: "200ms" }}>
+        <div className="flex-1 mt-12 lg:mt-0 animate-fadeIn translate-x-12 translate-y-16" style={{ animationDelay: "200ms" }}>
           <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto">
             <div className="absolute inset-0 rounded-full bg-secondary"></div>
             <img
