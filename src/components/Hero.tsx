@@ -12,8 +12,8 @@ const Hero = () => {
       waveOpacity={0.3}
       speed="slow"
     >
-      <div className="container mx-auto px-6 py-12 flex flex-col lg:flex-row items-center justify-between gap-16">
-        <div className="flex-1 animate-fadeIn">
+      <div className="container mx-auto px-6 py-12">
+        <div className="animate-fadeIn max-w-2xl">
           <h1 className="text-5xl md:text-7xl font-display mb-4">
             Antonio<br />Moya.
           </h1>
@@ -23,8 +23,8 @@ const Hero = () => {
           </p>
         </div>
         
-        <div className="flex-1 mt-12 lg:mt-0 animate-fadeIn translate-x-12 translate-y-16" style={{ animationDelay: "200ms" }}>
-          <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto">
+        <div className="animate-fadeIn translate-x-32 translate-y-24 flex justify-end" style={{ animationDelay: "200ms" }}>
+          <div className="relative w-72 h-72 md:w-96 md:h-96">
             <div className="absolute inset-0 rounded-full bg-secondary"></div>
             <img
               src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtY2JrY3BxOGt1dWF0MG9pNm51MmVxZnB6NnB3bGZwcWJxYjh6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qgQUggAC3Pfv687qPC/giphy.gif"
