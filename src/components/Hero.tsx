@@ -12,8 +12,8 @@ const Hero = () => {
       waveOpacity={0.3}
       speed="slow"
     >
-      <div className="container mx-auto px-6 py-12 flex flex-col lg:flex-row items-center justify-between">
-        <div className="flex-1 animate-fadeIn">
+      <div className="container mx-auto px-6 min-h-screen flex items-center justify-center">
+        <div className="flex-1 animate-fadeIn max-w-2xl">
           <h1 className="text-5xl md:text-7xl font-display mb-4">
             Antonio<br />Moya.
           </h1>
