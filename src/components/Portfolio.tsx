@@ -14,6 +14,12 @@ const Portfolio = () => {
       url: "https://luc-ia.fun",
       description: "Website development and management for Luc-ia.fun platform.",
       image: "/lovable-uploads/a9e98fe4-30f2-411d-a92c-d0ef922dc43e.png"
+    },
+    {
+      title: "UseTube",
+      url: "https://preview--usetube.lovable.app/",
+      description: "A modern YouTube playlist management application.",
+      image: "/lovable-uploads/55ac77ce-c6df-4929-b7ed-89778a994cd5.png"
     }
   ];
 
@@ -21,7 +27,7 @@ const Portfolio = () => {
     <section id="portfolio" className="py-20 px-6">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl font-display mb-12 text-center">Portfolio</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div 
               key={project.title} 
