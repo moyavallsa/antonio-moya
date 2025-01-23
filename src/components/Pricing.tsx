@@ -6,8 +6,8 @@ import { Button } from "./ui/button";
 interface Service {
   id: string;
   title: string;
-  price: number;
-  monthlyFee?: number;
+  monthlyPrice: number;
+  yearlyPrice?: number;
   description: string;
   icon: JSX.Element;
   features: string[];
@@ -16,13 +16,14 @@ interface Service {
 const Pricing = () => {
   const [selectedServices, setSelectedServices] = useState<Set<string>>(new Set());
   const [showTotal, setShowTotal] = useState(false);
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
 
   const services: Service[] = [
     {
       id: "web-dev",
       title: "Website Development",
-      price: 200,
-      monthlyFee: 50,
+      monthlyPrice: 50,
+      yearlyPrice: 50 * 12 * 0.9, // 10% discount
       description: "Custom website development with modern technologies",
       icon: <Code2 className="h-8 w-8" />,
       features: [
@@ -35,8 +36,8 @@ const Pricing = () => {
     {
       id: "web-design-dev",
       title: "Website Design & Development",
-      price: 300,
-      monthlyFee: 40,
+      monthlyPrice: 40,
+      yearlyPrice: 40 * 12 * 0.9, // 10% discount
       description: "Complete design and development solution",
       icon: <Plus className="h-8 w-8" />,
       features: [
@@ -50,7 +51,8 @@ const Pricing = () => {
     {
       id: "social-media",
       title: "Social Media Management",
-      price: 200,
+      monthlyPrice: 200,
+      yearlyPrice: 200 * 12 * 0.9, // 10% discount
       description: "Professional social media management",
       icon: <Share2 className="h-8 w-8" />,
       features: [
@@ -63,20 +65,18 @@ const Pricing = () => {
   ];
 
   const calculateTotal = () => {
-    let oneTime = 0;
-    let monthly = 0;
+    let total = 0;
 
     selectedServices.forEach((serviceId) => {
       const service = services.find((s) => s.id === serviceId);
       if (service) {
-        oneTime += service.price;
-        if (service.monthlyFee) {
-          monthly += service.monthlyFee;
-        }
+        total += billingCycle === 'yearly' 
+          ? (service.yearlyPrice || service.monthlyPrice * 12 * 0.9)
+          : service.monthlyPrice;
       }
     });
 
-    return { oneTime, monthly };
+    return total;
   };
 
   const toggleService = (serviceId: string) => {
@@ -90,12 +90,28 @@ const Pricing = () => {
     setShowTotal(true);
   };
 
-  const { oneTime, monthly } = calculateTotal();
+  const total = calculateTotal();
 
   return (
     <section id="pricing" className="py-20 px-6">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl font-display mb-12 text-center">Services Menu</h2>
+        <h2 className="text-4xl font-display mb-6 text-center">Services Menu</h2>
+        
+        <div className="flex justify-center gap-4 mb-12">
+          <Button
+            variant={billingCycle === 'monthly' ? 'default' : 'outline'}
+            onClick={() => setBillingCycle('monthly')}
+          >
+            Monthly Billing
+          </Button>
+          <Button
+            variant={billingCycle === 'yearly' ? 'default' : 'outline'}
+            onClick={() => setBillingCycle('yearly')}
+          >
+            Yearly Billing (10% off)
+          </Button>
+        </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {services.map((service, index) => (
             <Card 
@@ -119,12 +135,14 @@ const Pricing = () => {
               <CardHeader className="text-center relative z-10">
                 <div className="mx-auto mb-4">{service.icon}</div>
                 <CardTitle className="text-2xl font-display mb-2">{service.title}</CardTitle>
-                <div className="text-3xl font-bold mb-2">€{service.price}</div>
-                {service.monthlyFee && (
-                  <div className="text-sm text-muted-foreground">
-                    +€{service.monthlyFee}/month
-                  </div>
-                )}
+                <div className="text-3xl font-bold mb-2">
+                  €{billingCycle === 'yearly' 
+                      ? Math.round(service.yearlyPrice || service.monthlyPrice * 12 * 0.9) 
+                      : service.monthlyPrice}
+                  <span className="text-sm font-normal text-muted-foreground">
+                    /{billingCycle === 'yearly' ? 'year' : 'month'}
+                  </span>
+                </div>
               </CardHeader>
               
               <CardContent className="relative z-10">
@@ -149,10 +167,10 @@ const Pricing = () => {
         >
           <h3 className="text-xl font-display mb-2">Total Cost</h3>
           <div className="space-y-1">
-            <p>One-time: <span className="font-bold">€{oneTime}</span></p>
-            {monthly > 0 && (
-              <p>Monthly: <span className="font-bold">€{monthly}</span></p>
-            )}
+            <p>
+              {billingCycle === 'yearly' ? 'Yearly' : 'Monthly'}: 
+              <span className="font-bold"> €{Math.round(total)}</span>
+            </p>
           </div>
         </div>
       </div>
