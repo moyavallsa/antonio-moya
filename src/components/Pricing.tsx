@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Code2, Share2, ShoppingCart } from "lucide-react";
+import { Code2, Share2, ShoppingCart, Settings } from "lucide-react";
 import BillingToggle from "./pricing/BillingToggle";
 import ServiceCard from "./pricing/ServiceCard";
 import TotalDisplay from "./pricing/TotalDisplay";
@@ -111,7 +111,6 @@ const Pricing = () => {
       id: "landing-page",
       title: "Landing Page Development",
       monthlyPrice: 200,
-      yearlyPrice: 2160,
       description: "Custom landing page development",
       icon: <Code2 className="h-8 w-8" />,
       features: [
@@ -124,7 +123,6 @@ const Pricing = () => {
       id: "basic-website",
       title: "Basic Website Development",
       monthlyPrice: 400,
-      yearlyPrice: 4320,
       description: "Essential website development package",
       icon: <Code2 className="h-8 w-8" />,
       features: [
@@ -138,7 +136,6 @@ const Pricing = () => {
       id: "standard-website",
       title: "Standard Website Development",
       monthlyPrice: 800,
-      yearlyPrice: 8640,
       description: "Professional website development solution",
       icon: <Code2 className="h-8 w-8" />,
       features: [
@@ -147,6 +144,54 @@ const Pricing = () => {
         "Advanced SEO optimization",
         "CMS integration",
         "Image gallery"
+      ]
+    },
+    {
+      id: "basic-maintenance",
+      title: "Basic Website Maintenance",
+      monthlyPrice: 50,
+      yearlyPrice: 540,
+      description: "Essential website maintenance package",
+      icon: <Settings className="h-8 w-8" />,
+      features: [
+        "Monthly security updates",
+        "Weekly backups",
+        "Basic performance monitoring",
+        "Up to 2 content updates per month",
+        "Email support"
+      ]
+    },
+    {
+      id: "standard-maintenance",
+      title: "Standard Website Maintenance",
+      monthlyPrice: 100,
+      yearlyPrice: 1080,
+      description: "Professional website maintenance solution",
+      icon: <Settings className="h-8 w-8" />,
+      features: [
+        "Weekly security updates",
+        "Daily backups",
+        "Advanced performance monitoring",
+        "Up to 5 content updates per month",
+        "Priority email support",
+        "Monthly analytics report"
+      ]
+    },
+    {
+      id: "premium-maintenance",
+      title: "Premium Website Maintenance",
+      monthlyPrice: 200,
+      yearlyPrice: 2160,
+      description: "Complete website maintenance package",
+      icon: <Settings className="h-8 w-8" />,
+      features: [
+        "Real-time security monitoring",
+        "Hourly backups",
+        "24/7 uptime monitoring",
+        "Unlimited content updates",
+        "Priority phone & email support",
+        "Weekly analytics reports",
+        "Monthly SEO optimization"
       ]
     }
   ];
