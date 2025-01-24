@@ -1,16 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import PriceDisplay from "./PriceDisplay";
+import { Service } from "../../data/services";
 
 interface ServiceCardProps {
-  service: {
-    id: string;
-    title: string;
-    monthlyPrice: number;
-    yearlyPrice?: number;
-    description: string;
-    icon: JSX.Element;
-    features: string[];
-  };
+  service: Service;
   isSelected: boolean;
   onClick: () => void;
   billingCycle: 'monthly' | 'yearly';
@@ -43,6 +36,7 @@ const ServiceCard = ({ service, isSelected, onClick, billingCycle, index }: Serv
           monthlyPrice={service.monthlyPrice}
           yearlyPrice={service.yearlyPrice}
           billingCycle={billingCycle}
+          isOneTime={service.isOneTime}
         />
       </CardHeader>
       

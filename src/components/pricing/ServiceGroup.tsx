@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "../ui/button";
 import ServiceCard from "./ServiceCard";
+import { Service } from "../../data/services";
 
 interface ServiceGroupProps {
   title: string;
