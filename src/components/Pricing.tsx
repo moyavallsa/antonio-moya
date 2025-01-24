@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Code2, Share2, ShoppingCart, Settings } from "lucide-react";
 import BillingToggle from "./pricing/BillingToggle";
-import ServiceCard from "./pricing/ServiceCard";
 import TotalDisplay from "./pricing/TotalDisplay";
+import ServiceGroup from "./pricing/ServiceGroup";
 
 interface Service {
   id: string;
@@ -196,6 +196,29 @@ const Pricing = () => {
     }
   ];
 
+  const serviceGroups = [
+    {
+      title: "Social Media Management",
+      description: "Boost your social media presence with our comprehensive management solutions",
+      services: services.filter(s => s.id.includes("social"))
+    },
+    {
+      title: "E-commerce Management",
+      description: "Complete e-commerce solutions to grow your online business",
+      services: services.filter(s => s.id.includes("ecommerce"))
+    },
+    {
+      title: "Website Design & Development",
+      description: "Professional website development services for your business",
+      services: services.filter(s => ["landing-page", "basic-website", "standard-website"].includes(s.id))
+    },
+    {
+      title: "Website Maintenance",
+      description: "Keep your website secure, up-to-date, and performing at its best",
+      services: services.filter(s => s.id.includes("maintenance"))
+    }
+  ];
+
   const calculateTotal = () => {
     let total = 0;
     selectedServices.forEach((serviceId) => {
@@ -230,15 +253,16 @@ const Pricing = () => {
           setBillingCycle={setBillingCycle}
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {services.map((service, index) => (
-            <ServiceCard
-              key={service.id}
-              service={service}
-              isSelected={selectedServices.has(service.id)}
-              onClick={() => toggleService(service.id)}
+        <div className="space-y-6 mb-12">
+          {serviceGroups.map((group) => (
+            <ServiceGroup
+              key={group.title}
+              title={group.title}
+              description={group.description}
+              services={group.services}
               billingCycle={billingCycle}
-              index={index}
+              onServiceSelect={toggleService}
+              selectedServices={selectedServices}
             />
           ))}
         </div>
