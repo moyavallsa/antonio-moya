@@ -27,17 +27,17 @@ const ServiceGroup = ({
     <div className="w-full mb-8">
       <Button
         variant="secondary"
-        className="w-full mb-4 py-6 text-left flex justify-between items-center group hover:bg-secondary/80"
+        className="w-full mb-4 py-8 text-left flex justify-between items-center group hover:bg-secondary/80"
         onClick={() => setIsExpanded(!isExpanded)}
       >
-        <div>
-          <h3 className="text-xl font-display mb-1">{title}</h3>
+        <div className="px-4">
+          <h3 className="text-xl font-display mb-2">{title}</h3>
           <p className="text-sm text-muted-foreground">{description}</p>
         </div>
         {isExpanded ? (
-          <ChevronUp className="h-6 w-6 transition-transform group-hover:scale-110" />
+          <ChevronUp className="h-6 w-6 transition-transform group-hover:scale-110 mr-4" />
         ) : (
-          <ChevronDown className="h-6 w-6 transition-transform group-hover:scale-110" />
+          <ChevronDown className="h-6 w-6 transition-transform group-hover:scale-110 mr-4" />
         )}
       </Button>
       
