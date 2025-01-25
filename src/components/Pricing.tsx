@@ -15,8 +15,8 @@ const Pricing = () => {
   } = usePricing();
 
   return (
-    <section id="pricing" className="py-20 px-4 md:px-6">
-      <div className="container mx-auto max-w-7xl">
+    <section id="pricing" className="py-12 w-full overflow-hidden">
+      <div className="max-w-[100vw] mx-auto px-4 md:max-w-7xl">
         <h2 className="text-3xl md:text-4xl font-display mb-6 text-center">Services Menu</h2>
         
         <BillingToggle 
@@ -24,7 +24,7 @@ const Pricing = () => {
           setBillingCycle={setBillingCycle}
         />
 
-        <div className="space-y-6 mb-12">
+        <div className="space-y-4 mb-8">
           {serviceGroups.map((group) => (
             <ServiceGroup
               key={group.title}

@@ -24,25 +24,25 @@ const ServiceGroup = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="w-full mb-8 px-2 md:px-0">
+    <div className="w-full">
       <Button
         variant="secondary"
-        className="w-full mb-4 py-8 text-left flex justify-between items-center group hover:bg-secondary/80"
+        className="w-full py-6 text-left flex justify-between items-center group hover:bg-secondary/80"
         onClick={() => setIsExpanded(!isExpanded)}
       >
-        <div className="px-2 md:px-4">
-          <h3 className="text-xl font-display mb-2">{title}</h3>
-          <p className="text-sm text-muted-foreground">{description}</p>
+        <div className="flex-1 pr-4">
+          <h3 className="text-lg md:text-xl font-display mb-1">{title}</h3>
+          <p className="text-xs md:text-sm text-muted-foreground line-clamp-2">{description}</p>
         </div>
         {isExpanded ? (
-          <ChevronUp className="h-6 w-6 transition-transform group-hover:scale-110 mr-2 md:mr-4 flex-shrink-0" />
+          <ChevronUp className="h-5 w-5 md:h-6 md:w-6 transition-transform group-hover:scale-110 flex-shrink-0" />
         ) : (
-          <ChevronDown className="h-6 w-6 transition-transform group-hover:scale-110 mr-2 md:mr-4 flex-shrink-0" />
+          <ChevronDown className="h-5 w-5 md:h-6 md:w-6 transition-transform group-hover:scale-110 flex-shrink-0" />
         )}
       </Button>
       
       {isExpanded && (
-        <div className="grid grid-cols-1 gap-4 animate-fadeIn">
+        <div className="grid grid-cols-1 gap-3 mt-3 animate-fadeIn">
           {services.map((service, index) => (
             <ServiceCard
               key={service.id}
