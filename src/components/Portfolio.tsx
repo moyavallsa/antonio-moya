@@ -26,32 +26,32 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="py-20 px-6">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl font-display mb-12 text-center">Portfolio</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 className="text-3xl md:text-4xl font-display mb-12 text-center">Portfolio</h2>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {projects.map((project) => (
             <div 
               key={project.title} 
-              className="group relative overflow-hidden rounded-lg bg-secondary p-6 transition-all duration-500 hover:bg-secondary/80 hover:scale-105 hover:shadow-2xl"
+              className="group relative overflow-hidden rounded-lg bg-secondary p-4 md:p-6 transition-all duration-500 hover:bg-secondary/80 hover:scale-105 hover:shadow-2xl"
             >
-              <div className="aspect-video mb-6 overflow-hidden rounded-lg bg-muted">
+              <div className="aspect-video mb-4 md:mb-6 overflow-hidden rounded-lg bg-muted">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:rotate-1"
                 />
               </div>
-              <h3 className="text-2xl font-display mb-2 transition-transform duration-300 group-hover:translate-x-2">{project.title}</h3>
-              <p className="text-muted-foreground mb-4 transition-transform duration-300 group-hover:translate-x-2">{project.description}</p>
+              <h3 className="text-xl md:text-2xl font-display mb-2 transition-transform duration-300 group-hover:translate-x-2">{project.title}</h3>
+              <p className="text-sm md:text-base text-muted-foreground mb-4 transition-transform duration-300 group-hover:translate-x-2">{project.description}</p>
               <Button 
                 asChild 
                 variant="outline"
-                className="transition-transform duration-300 group-hover:translate-x-2"
+                className="w-full md:w-auto transition-transform duration-300 group-hover:translate-x-2"
               >
                 <a 
                   href={project.url} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="inline-flex items-center gap-2"
+                  className="inline-flex items-center justify-center gap-2"
                 >
                   Visit Website
                   <ExternalLink className="h-4 w-4" />

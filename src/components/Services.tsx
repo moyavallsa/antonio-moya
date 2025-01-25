@@ -18,20 +18,20 @@ const Services = () => {
   return (
     <section id="services" className="py-20 px-6">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl font-display mb-12 text-center animate-fade-in">Services</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <h2 className="text-3xl md:text-4xl font-display mb-12 text-center animate-fade-in">Services</h2>
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           {services.map((service, index) => (
             <Card 
               key={service.title}
               className="bg-secondary border-none hover:bg-secondary/80 transition-all duration-300 hover:scale-105"
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              <CardHeader className="text-center">
+              <CardHeader className="text-center space-y-4 p-4 md:p-6">
                 <div className="flex justify-center">{service.icon}</div>
-                <CardTitle className="text-2xl font-display">{service.title}</CardTitle>
+                <CardTitle className="text-xl md:text-2xl font-display">{service.title}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-center">{service.description}</p>
+              <CardContent className="p-4 md:p-6">
+                <p className="text-sm md:text-base text-muted-foreground text-center">{service.description}</p>
               </CardContent>
             </Card>
           ))}
