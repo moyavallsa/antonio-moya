@@ -29,9 +29,9 @@ const ServiceCard = ({ service, isSelected, onClick, billingCycle, index }: Serv
         <div className="h-full w-full bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] bg-[length:4px_4px] animate-gradient" />
       </div>
       
-      <CardHeader className="text-center relative z-10 p-4">
-        <div className="mx-auto mb-3">{service.icon}</div>
-        <CardTitle className="text-lg md:text-xl font-display mb-2">{service.title}</CardTitle>
+      <CardHeader className="text-center relative z-10 p-3 sm:p-4">
+        <div className="mx-auto mb-2 sm:mb-3">{service.icon}</div>
+        <CardTitle className="text-base sm:text-lg md:text-xl font-display mb-2 break-words">{service.title}</CardTitle>
         <PriceDisplay
           monthlyPrice={service.monthlyPrice}
           yearlyPrice={service.yearlyPrice}
@@ -40,13 +40,13 @@ const ServiceCard = ({ service, isSelected, onClick, billingCycle, index }: Serv
         />
       </CardHeader>
       
-      <CardContent className="relative z-10 p-4 pt-0">
-        <p className="text-sm text-muted-foreground mb-3">{service.description}</p>
-        <ul className="space-y-2">
+      <CardContent className="relative z-10 p-3 sm:p-4 pt-0">
+        <p className="text-xs sm:text-sm text-muted-foreground mb-3 break-words">{service.description}</p>
+        <ul className="space-y-1 sm:space-y-2">
           {service.features.map((feature) => (
-            <li key={feature} className="flex items-center gap-2 text-sm">
-              <span className="text-primary">›</span>
-              {feature}
+            <li key={feature} className="flex items-start gap-2 text-xs sm:text-sm break-words">
+              <span className="text-primary mt-0.5">›</span>
+              <span className="flex-1">{feature}</span>
             </li>
           ))}
         </ul>

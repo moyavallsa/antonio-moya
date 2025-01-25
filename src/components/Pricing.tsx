@@ -15,8 +15,8 @@ const Pricing = () => {
   } = usePricing();
 
   return (
-    <section id="pricing" className="py-12 w-full overflow-hidden">
-      <div className="max-w-[100vw] mx-auto px-4 md:max-w-7xl">
+    <section id="pricing" className="py-12 w-full">
+      <div className="mx-auto px-4 sm:px-6 max-w-full sm:max-w-7xl">
         <h2 className="text-3xl md:text-4xl font-display mb-6 text-center">Services Menu</h2>
         
         <BillingToggle 
