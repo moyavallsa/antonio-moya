@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "../ui/button";
 import ServiceCard from "./ServiceCard";
-import { Service } from "../../data/services";
+import { Service } from "../../data/services/types";
 
 interface ServiceGroupProps {
   title: string;
@@ -35,14 +35,14 @@ const ServiceGroup = ({
           <p className="text-sm text-muted-foreground">{description}</p>
         </div>
         {isExpanded ? (
-          <ChevronUp className="h-6 w-6 transition-transform group-hover:scale-110 mr-4" />
+          <ChevronUp className="h-6 w-6 transition-transform group-hover:scale-110 mr-4 flex-shrink-0" />
         ) : (
-          <ChevronDown className="h-6 w-6 transition-transform group-hover:scale-110 mr-4" />
+          <ChevronDown className="h-6 w-6 transition-transform group-hover:scale-110 mr-4 flex-shrink-0" />
         )}
       </Button>
       
       {isExpanded && (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fadeIn">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 px-2 md:px-0 animate-fadeIn">
           {services.map((service, index) => (
             <ServiceCard
               key={service.id}

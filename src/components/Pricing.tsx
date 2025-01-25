@@ -15,9 +15,9 @@ const Pricing = () => {
   } = usePricing();
 
   return (
-    <section id="pricing" className="py-20 px-6">
+    <section id="pricing" className="py-20 px-4 md:px-6">
       <div className="container mx-auto max-w-7xl">
-        <h2 className="text-4xl font-display mb-6 text-center">Services Menu</h2>
+        <h2 className="text-3xl md:text-4xl font-display mb-6 text-center">Services Menu</h2>
         
         <BillingToggle 
           billingCycle={billingCycle}

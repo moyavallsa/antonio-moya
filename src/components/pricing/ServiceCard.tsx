@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import PriceDisplay from "./PriceDisplay";
-import { Service } from "../../data/services";
+import { Service } from "../../data/services/types";
 
 interface ServiceCardProps {
   service: Service;
@@ -13,7 +13,7 @@ interface ServiceCardProps {
 const ServiceCard = ({ service, isSelected, onClick, billingCycle, index }: ServiceCardProps) => {
   return (
     <Card 
-      className={`relative overflow-hidden transition-all duration-500 hover:scale-105 cursor-pointer ${
+      className={`relative overflow-hidden transition-all duration-500 hover:scale-105 cursor-pointer w-full ${
         isSelected 
           ? 'bg-secondary border-primary' 
           : 'bg-secondary/50 hover:bg-secondary/80'
@@ -29,9 +29,9 @@ const ServiceCard = ({ service, isSelected, onClick, billingCycle, index }: Serv
         <div className="h-full w-full bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] bg-[length:4px_4px] animate-gradient" />
       </div>
       
-      <CardHeader className="text-center relative z-10">
+      <CardHeader className="text-center relative z-10 p-4 md:p-6">
         <div className="mx-auto mb-4">{service.icon}</div>
-        <CardTitle className="text-2xl font-display mb-2">{service.title}</CardTitle>
+        <CardTitle className="text-xl md:text-2xl font-display mb-2">{service.title}</CardTitle>
         <PriceDisplay
           monthlyPrice={service.monthlyPrice}
           yearlyPrice={service.yearlyPrice}
@@ -40,11 +40,11 @@ const ServiceCard = ({ service, isSelected, onClick, billingCycle, index }: Serv
         />
       </CardHeader>
       
-      <CardContent className="relative z-10">
-        <p className="text-muted-foreground mb-4">{service.description}</p>
-        <ul className="space-y-2">
+      <CardContent className="relative z-10 p-4 md:p-6">
+        <p className="text-sm md:text-base text-muted-foreground mb-4">{service.description}</p>
+        <ul className="space-y-3">
           {service.features.map((feature) => (
-            <li key={feature} className="flex items-center gap-2">
+            <li key={feature} className="flex items-center gap-2 text-sm md:text-base">
               <span className="text-primary">›</span>
               {feature}
             </li>
