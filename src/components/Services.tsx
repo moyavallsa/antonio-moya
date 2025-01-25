@@ -16,22 +16,22 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 px-4 md:px-6">
+    <section id="services" className="py-20 px-6">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-3xl md:text-4xl font-display mb-12 text-center animate-fade-in">Services</h2>
-        <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+        <h2 className="text-4xl font-display mb-12 text-center animate-fade-in">Services</h2>
+        <div className="grid md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <Card 
               key={service.title}
-              className="bg-secondary border-none hover:bg-secondary/80 transition-all duration-300 hover:scale-105 w-full"
+              className="bg-secondary border-none hover:bg-secondary/80 transition-all duration-300 hover:scale-105"
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              <CardHeader className="text-center space-y-4 p-4">
+              <CardHeader className="text-center">
                 <div className="flex justify-center">{service.icon}</div>
-                <CardTitle className="text-xl md:text-2xl font-display">{service.title}</CardTitle>
+                <CardTitle className="text-2xl font-display">{service.title}</CardTitle>
               </CardHeader>
-              <CardContent className="p-4">
-                <p className="text-sm md:text-base text-muted-foreground text-center">{service.description}</p>
+              <CardContent>
+                <p className="text-muted-foreground text-center">{service.description}</p>
               </CardContent>
             </Card>
           ))}

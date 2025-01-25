@@ -13,14 +13,14 @@ const Hero = () => {
         position="relative"
       >
         <div className="container mx-auto px-6 min-h-screen flex items-center justify-center">
-          <div className="flex-1 animate-fadeIn max-w-2xl text-center md:text-left">
-            <h1 className="text-4xl md:text-7xl font-display mb-4">
+          <div className="flex-1 animate-fadeIn max-w-2xl">
+            <h1 className="text-5xl md:text-7xl font-display mb-4">
               Antonio<br />Moya.
             </h1>
-            <p className="text-lg md:text-2xl text-muted-foreground mb-8">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
               Web Designer & Developer
             </p>
-            <p className="text-base md:text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground">
               Creating beautiful, functional websites and digital experiences.
             </p>
           </div>

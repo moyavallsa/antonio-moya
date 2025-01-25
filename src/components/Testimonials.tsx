@@ -22,23 +22,23 @@ const Testimonials = () => {
   return (
     <section className="py-20 px-6 bg-secondary/30">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-3xl md:text-4xl font-display mb-12 text-center">
+        <h2 className="text-4xl font-display mb-16 text-center">
           What Our Clients Say
         </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="group relative bg-secondary p-6 md:p-8 rounded-lg transition-all duration-500 hover:bg-secondary/80"
+              className="group relative bg-secondary p-8 rounded-lg transition-all duration-500 hover:bg-secondary/80"
             >
               <Quote className="absolute -top-4 -left-4 h-8 w-8 text-muted-foreground opacity-50 group-hover:text-primary group-hover:opacity-100 transition-all duration-500" />
               <div className="space-y-4">
-                <p className="text-sm md:text-base text-muted-foreground italic leading-relaxed group-hover:text-foreground transition-colors duration-500">
+                <p className="text-muted-foreground italic leading-relaxed group-hover:text-foreground transition-colors duration-500">
                   "{testimonial.quote}"
                 </p>
                 <div>
-                  <p className="font-display text-base md:text-lg">{testimonial.author}</p>
-                  <p className="text-xs md:text-sm text-muted-foreground">{testimonial.role}</p>
+                  <p className="font-display text-lg">{testimonial.author}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                 </div>
               </div>
             </div>
