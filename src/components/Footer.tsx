@@ -17,10 +17,10 @@ const Footer = () => {
               asChild
             >
               <a
-                href="https://www.youtube.com/@antoniomoya"
+                href="https://www.youtube.com/@mind-machines-ai"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Visit my YouTube channel"
+                aria-label="Visit Mind Machines AI YouTube channel"
               >
                 <Youtube className="h-5 w-5" />
               </a>
@@ -32,10 +32,10 @@ const Footer = () => {
               asChild
             >
               <a
-                href="https://open.spotify.com/show/antoniomoya"
+                href="https://open.spotify.com/show/mind-machines-ai"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Listen to my podcast on Spotify"
+                aria-label="Listen to Mind Machines AI podcast on Spotify"
               >
                 <Music className="h-5 w-5" />
               </a>
