@@ -1,4 +1,4 @@
-import { Mail, Linkedin } from "lucide-react";
+import { Mail, Linkedin, Youtube, Music } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Contact = () => {
@@ -35,6 +35,38 @@ const Contact = () => {
               >
                 <Linkedin className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
                 Connect on LinkedIn
+              </a>
+            </Button>
+
+            <Button
+              variant="outline"
+              size="lg"
+              className="w-full max-w-md group hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+              asChild
+            >
+              <a 
+                href="https://www.youtube.com/@mind-machines-ai"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Youtube className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+                Watch on YouTube
+              </a>
+            </Button>
+
+            <Button
+              variant="outline"
+              size="lg"
+              className="w-full max-w-md group hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+              asChild
+            >
+              <a 
+                href="https://open.spotify.com/show/0WHuuDYItly0PDTpV6IQq0?si=c3ee4dbda89f4aec"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Music className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+                Listen on Spotify
               </a>
             </Button>
           </div>
