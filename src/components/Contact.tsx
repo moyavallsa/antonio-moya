@@ -19,7 +19,7 @@ const Contact = () => {
               onClick={handleEmailClick}
             >
               <Mail className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-              a.moya.valls@icloud.com
+              Send me an email
             </Button>
             
             <Button
@@ -50,7 +50,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
               >
                 <Youtube className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-                Watch on YouTube
+                Mind Machines AI on YouTube
               </a>
             </Button>
 
@@ -66,7 +66,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
               >
                 <Music className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-                Listen on Spotify
+                Mind Machines AI Podcast
               </a>
             </Button>
           </div>
