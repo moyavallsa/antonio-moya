@@ -32,7 +32,7 @@ const Footer = () => {
               asChild
             >
               <a
-                href="https://open.spotify.com/show/mind-machines-ai"
+                href="https://open.spotify.com/show/0WHuuDYItly0PDTpV6IQq0?si=c3ee4dbda89f4aec"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Listen to Mind Machines AI podcast on Spotify"
