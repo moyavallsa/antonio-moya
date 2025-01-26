@@ -20,38 +20,44 @@ const Portfolio = () => {
       url: "https://preview--usetube.lovable.app/",
       description: "A modern YouTube playlist management application.",
       image: "/lovable-uploads/55ac77ce-c6df-4929-b7ed-89778a994cd5.png"
+    },
+    {
+      title: "Hack News",
+      url: "https://preview--hack-news.lovable.app/",
+      description: "A modern hacker news-inspired application with a Matrix-style terminal interface.",
+      image: "/lovable-uploads/f8d92a45-7c6d-4e8b-a3bc-9d3e47c5b8e1.png"
     }
   ];
 
   return (
-    <section id="portfolio" className="py-20 px-6">
+    <section id="portfolio" className="py-12 px-4 sm:px-6 w-full overflow-x-hidden">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl font-display mb-12 text-center">Portfolio</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <div 
               key={project.title} 
-              className="group relative overflow-hidden rounded-lg bg-secondary p-6 transition-all duration-500 hover:bg-secondary/80 hover:scale-105 hover:shadow-2xl"
+              className="group relative overflow-hidden rounded-lg bg-secondary p-4 sm:p-6 transition-all duration-500 hover:bg-secondary/80 hover:scale-105 hover:shadow-2xl"
             >
-              <div className="aspect-video mb-6 overflow-hidden rounded-lg bg-muted">
+              <div className="aspect-video mb-4 sm:mb-6 overflow-hidden rounded-lg bg-muted">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:rotate-1"
                 />
               </div>
-              <h3 className="text-2xl font-display mb-2 transition-transform duration-300 group-hover:translate-x-2">{project.title}</h3>
-              <p className="text-muted-foreground mb-4 transition-transform duration-300 group-hover:translate-x-2">{project.description}</p>
+              <h3 className="text-xl sm:text-2xl font-display mb-2 transition-transform duration-300 group-hover:translate-x-2">{project.title}</h3>
+              <p className="text-sm sm:text-base text-muted-foreground mb-4 transition-transform duration-300 group-hover:translate-x-2">{project.description}</p>
               <Button 
                 asChild 
                 variant="outline"
-                className="transition-transform duration-300 group-hover:translate-x-2"
+                className="w-full sm:w-auto transition-transform duration-300 group-hover:translate-x-2"
               >
                 <a 
                   href={project.url} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="inline-flex items-center gap-2"
+                  className="inline-flex items-center justify-center gap-2"
                 >
                   Visit Website
                   <ExternalLink className="h-4 w-4" />
