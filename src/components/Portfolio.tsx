@@ -23,7 +23,7 @@ const Portfolio = () => {
     },
     {
       title: "Hack News",
-      url: "https://preview--hack-news.lovable.app/",
+      url: "https://hckernews.netlify.app/",
       description: "A modern hacker news-inspired application with a Matrix-style terminal interface.",
       image: "/lovable-uploads/f8d92a45-7c6d-4e8b-a3bc-9d3e47c5b8e1.png"
     }
