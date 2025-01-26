@@ -72,5 +72,16 @@ We don't support custom domains (yet). If you want to deploy your project under 
 
 This is my personal portfolio website showcasing my projects and skills.
 
+## Deployment Information
+- Website: [www.antonio-moya.com](https://www.antonio-moya.com)
+- Hosting: Netlify with automatic deployment
+- Status: Active
+
+## Projects
+- Unimodul.es - Website development and management
+- Luc-ia.fun - AI Assistant platform
+- UseTube - YouTube playlist management
+- Hack News - Modern news aggregator
+
 ## Auto-deployment Test
 This line was added to test the automatic deployment system.
