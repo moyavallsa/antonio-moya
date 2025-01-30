@@ -4,6 +4,12 @@ import { Button } from "./ui/button";
 const Portfolio = () => {
   const projects = [
     {
+      title: "DexView",
+      url: "https://dexview.netlify.app",
+      description: "A real-time cryptocurrency data platform featuring a comprehensive scraper that aggregates and displays essential metrics for crypto assets, providing instant market insights.",
+      image: "/lovable-uploads/dex-view.png"
+    },
+    {
       title: "Unimodul.es",
       url: "https://unimodul.es",
       description: "Website development and management for Unimodul.es platform.",
