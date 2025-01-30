@@ -1,4 +1,4 @@
-import { Code, Share, ShoppingCart } from "lucide-react";
+import { Code, Facebook, Instagram, Twitter, ShoppingCart } from "lucide-react";
 
 // Services component with Web, Social Media, and E-commerce management services
 const Services = () => {
@@ -9,7 +9,13 @@ const Services = () => {
       description: "Custom website design and development tailored to your brand's unique needs. Creating responsive, modern, and user-friendly web experiences."
     },
     {
-      icon: <Share className="w-12 h-12 mb-6" />,
+      icon: (
+        <div className="flex gap-2">
+          <Facebook className="w-12 h-12 mb-6" />
+          <Instagram className="w-12 h-12 mb-6" />
+          <Twitter className="w-12 h-12 mb-6" />
+        </div>
+      ),
       title: "Social Media Management",
       description: "Strategic social media management and content creation to boost your brand's online presence and engage with your target audience."
     },
