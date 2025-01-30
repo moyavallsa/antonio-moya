@@ -1,6 +1,6 @@
 import { Code, Share, ShoppingCart } from "lucide-react";
 
-// Services component with Web, Social Media, and E-commerce management
+// Services component with Web, Social Media, and E-commerce management services
 const Services = () => {
   const services = [
     {
