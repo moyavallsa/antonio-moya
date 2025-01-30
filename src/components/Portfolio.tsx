@@ -33,7 +33,7 @@ const Portfolio = () => {
     {
       title: "The Irish Woollen Workshop",
       url: "https://theirishwoollenworkshop.com",
-      description: "Premium e-commerce platform for authentic Irish sheepskin products, featuring luxury rugs, slippers, pet beds, and wellness items. Complete with multi-currency support and installment payment options.",
+      description: "Luxury Irish sheepskin e-commerce platform featuring seasonal-adaptive products including signature Huggable Booties, sheepskin rugs, pet beds, and baby care items. Includes multi-currency support, installment payments, and free shipping options within Ireland.",
       image: "/lovable-uploads/irish-woollen.png"
     },
     {
