@@ -38,8 +38,8 @@ const Portfolio = () => {
     },
     {
       title: "Elite Equine",
-      url: "https://eliteequine.es",
-      description: "Complete e-commerce solution for Elite Equine, offering premium equestrian products and accessories.",
+      url: "https://eliteequine.ie",
+      description: "Complete e-commerce solution for Elite Equine, Ireland's premier brand for equestrian products. Features a comprehensive catalog of horse care products, riding gear, and stable equipment.",
       image: "/lovable-uploads/elite-equine.png"
     }
   ];
