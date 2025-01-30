@@ -4,6 +4,18 @@ import { Button } from "./ui/button";
 const Portfolio = () => {
   const projects = [
     {
+      title: "IrishWoool",
+      url: "https://irishwoool.com",
+      description: "Full e-commerce platform development and management for IrishWoool, specializing in premium wool products.",
+      image: "/lovable-uploads/irishwoool.png"
+    },
+    {
+      title: "Elite Equine",
+      url: "https://eliteequine.es",
+      description: "Complete e-commerce solution for Elite Equine, offering premium equestrian products and accessories.",
+      image: "/lovable-uploads/eliteequine.png"
+    },
+    {
       title: "Unimodul.es",
       url: "https://unimodul.es",
       description: "Website development and management for Unimodul.es platform.",
@@ -16,10 +28,10 @@ const Portfolio = () => {
       image: "/lovable-uploads/a9e98fe4-30f2-411d-a92c-d0ef922dc43e.png"
     },
     {
-  title: "UseTube",
-  url: "https://usetube.netlify.app/auth",
-  description: "A modern YouTube playlist management application.",
-  image: "/lovable-uploads/55ac77ce-c6df-4929-b7ed-89778a994cd5.png"
+      title: "UseTube",
+      url: "https://usetube.netlify.app/auth",
+      description: "A modern YouTube playlist management application.",
+      image: "/lovable-uploads/55ac77ce-c6df-4929-b7ed-89778a994cd5.png"
     },
     {
       title: "Hack News",
