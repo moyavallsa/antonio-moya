@@ -31,9 +31,9 @@ const Portfolio = () => {
 
   const ecommerceProjects = [
     {
-      title: "IrishWoool",
-      url: "https://irishwoool.com",
-      description: "Full e-commerce platform development and management for IrishWoool, specializing in premium wool products.",
+      title: "The Irish Woollen Workshop",
+      url: "https://theirishwoollenworkshop.com",
+      description: "Premium e-commerce platform for authentic Irish sheepskin products, featuring luxury rugs, slippers, pet beds, and wellness items. Complete with multi-currency support and installment payment options.",
       image: "/lovable-uploads/irish-woollen.png"
     },
     {
