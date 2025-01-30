@@ -7,13 +7,13 @@ const Portfolio = () => {
       title: "IrishWoool",
       url: "https://irishwoool.com",
       description: "Full e-commerce platform development and management for IrishWoool, specializing in premium wool products.",
-      image: "/lovable-uploads/irishwoool.png"
+      image: "/lovable-uploads/irish-woollen.png"
     },
     {
       title: "Elite Equine",
       url: "https://eliteequine.es",
       description: "Complete e-commerce solution for Elite Equine, offering premium equestrian products and accessories.",
-      image: "/lovable-uploads/eliteequine.png"
+      image: "/lovable-uploads/elite-equine.png"
     },
     {
       title: "Unimodul.es",
