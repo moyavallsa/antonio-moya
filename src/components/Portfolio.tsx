@@ -80,7 +80,7 @@ const Portfolio = () => {
     <>
       <section id="portfolio" className="py-12 px-4 sm:px-6 w-full overflow-x-hidden">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-display mb-12 text-center">Portfolio</h2>
+          <h2 className="text-4xl font-display mb-12 text-center">Web/App Portfolio</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project) => (
               <ProjectCard key={project.title} project={project} />
