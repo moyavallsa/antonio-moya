@@ -1,8 +1,15 @@
+
 import { ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Portfolio = () => {
   const projects = [
+    {
+      title: "Fastvoice",
+      url: "https://www.fastvoice.online/",
+      description: "An automated invoicing platform powered by Stripe that streamlines payment workflows and enables faster payments for businesses.",
+      image: "/lovable-uploads/4d668910-081f-4546-8473-42c571edcf44.png"
+    },
     {
       title: "DexView",
       url: "https://dexview.netlify.app",
