@@ -21,7 +21,7 @@ const Hero = () => {
                 text="Antonio"
                 animateOn="view"
                 sequential={true}
-                speed={30}
+                speed={150}
                 className="text-foreground"
                 encryptedClassName="text-primary/50"
                 parentClassName="block"
@@ -30,7 +30,7 @@ const Hero = () => {
                 text="Moya."
                 animateOn="view"
                 sequential={true}
-                speed={30}
+                speed={150}
                 className="text-foreground"
                 encryptedClassName="text-primary/50"
                 parentClassName="block"
@@ -41,7 +41,7 @@ const Hero = () => {
                 text="Web Designer & Developer"
                 animateOn="view"
                 sequential={true}
-                speed={20}
+                speed={100}
                 className="text-muted-foreground"
                 encryptedClassName="text-muted-foreground/50"
               />
@@ -51,7 +51,7 @@ const Hero = () => {
                 text="Creating beautiful, functional websites and digital experiences."
                 animateOn="view"
                 sequential={true}
-                speed={10}
+                speed={80}
                 className="text-muted-foreground"
                 encryptedClassName="text-muted-foreground/50"
               />
