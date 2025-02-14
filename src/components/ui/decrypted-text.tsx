@@ -1,13 +1,14 @@
-import { useEffect, useState, useRef } from 'react'
+
+import { useEffect, useState, useRef, CSSProperties } from 'react'
 import { motion } from 'framer-motion'
 
-const styles = {
+const styles: { [key: string]: CSSProperties } = {
   wrapper: {
     display: 'inline-block',
     whiteSpace: 'pre-wrap',
   },
   srOnly: {
-    position: 'absolute',
+    position: 'absolute' as const,
     width: '1px',
     height: '1px',
     padding: 0,
@@ -54,10 +55,10 @@ export default function DecryptedText({
   const containerRef = useRef(null)
 
   useEffect(() => {
-    let interval
+    let interval: NodeJS.Timeout | undefined
     let currentIteration = 0
 
-    const getNextIndex = (revealedSet) => {
+    const getNextIndex = (revealedSet: Set<number>) => {
       const textLength = text.length
       switch (revealDirection) {
         case 'start':
@@ -90,7 +91,7 @@ export default function DecryptedText({
       ? Array.from(new Set(text.split(''))).filter((char) => char !== ' ')
       : characters.split('')
 
-    const shuffleText = (originalText, currentRevealed) => {
+    const shuffleText = (originalText: string, currentRevealed: Set<number>) => {
       if (useOriginalCharsOnly) {
         const positions = originalText.split('').map((char, i) => ({
           char,
@@ -179,7 +180,7 @@ export default function DecryptedText({
   useEffect(() => {
     if (animateOn !== 'view') return
 
-    const observerCallback = (entries) => {
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && !hasAnimated) {
           setIsHovering(true) // trigger the decrypteion
