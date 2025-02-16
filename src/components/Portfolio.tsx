@@ -5,6 +5,12 @@ import { Button } from "./ui/button";
 const Portfolio = () => {
   const projects = [
     {
+      title: "Pillpals",
+      url: "https://pillpals.netlify.app/",
+      description: "A medication reminder application that helps users track their medications with personalized SMS and email notifications, featuring customizable schedules and multi-medication support.",
+      image: "/lovable-uploads/e0b37c7f-061d-45f8-8eee-7852e306e9b6.png"
+    },
+    {
       title: "Fastvoice",
       url: "https://www.fastvoice.online/",
       description: "An automated invoicing platform powered by Stripe that streamlines payment workflows and enables faster payments for businesses.",
